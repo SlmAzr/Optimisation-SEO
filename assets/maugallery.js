@@ -237,6 +237,7 @@
     },
     filterByTag() {
       if ($(this).hasClass("active-tag")) {
+        
         return;
       }
       $(".active-tag").removeClass("active active-tag");
@@ -260,4 +261,8 @@
       });
     }
   };
+
+ 
+
 })(jQuery);
+
