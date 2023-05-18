@@ -1,3 +1,6 @@
+
+
+
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -11,18 +14,22 @@ header {
 	position: sticky;
 	top:0;
 	z-index: 1000;
-	
 	padding-inline: 100px;
 	padding-block: 30px;
-	/* align-items: center; */
+	
 }
+
+img {
+	width: 100%; /* or max-width: 100%; */
+	height: auto;
+  }
 .top-header{
 	width: 100%;
 	display: flex;
-	
 	justify-content: space-between;
 	align-items: center;
 }
+
 .top-header .name {
 	font-size: 26px;
 }
@@ -41,6 +48,9 @@ header {
 .nav a {
 	text-decoration: none;
 	color: #000
+}
+.gallery ul {
+	cursor: pointer;
 }
 
 .social-link img {
@@ -96,7 +106,7 @@ header {
 }
 
 #gallery {
-		/* min-height: 100vh; */
+	/*	min-height: 100vh; */
 }
 .title{
 	text-align: center;
@@ -105,31 +115,18 @@ header {
 .gallery .nav {
 	justify-content: center;
 }
- .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #000000;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color: #fff;
 	background-color: #BEB45A;
 	border-radius:0 ;
-} 
-
-span.active{
-	cursor: all-scroll;
+}
+.nav-pills .nav-link {
+	color: #000
+}
+.nav-link.active-link{
+	color: #000000;
 	background-color: #BEB45A;
 }
-
- .nav-link{
-	color: black;
- }
- 
-
-
-.nav-pills .nav-link {
-	color: #000;
-	background: red;
-}
-
-
-
-
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
@@ -375,5 +372,4 @@ input[type="submit"] {
 		width: 80%;
 	}
 }
-
 
