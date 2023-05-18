@@ -57,12 +57,17 @@
       }
     });
 
+
+
+
     $(".gallery").on("click", ".nav-link", function() {
       $(".nav-link").removeClass("active-link");
       $(this).addClass("active-link");
       $.fn.mauGallery.methods.filterByTag();
     });
   
+
+    
 
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
