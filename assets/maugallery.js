@@ -57,6 +57,13 @@
       }
     });
 
+    $(".gallery").on("click", ".nav-link", function() {
+      $(".nav-link").removeClass("active-link");
+      $(this).addClass("active-link");
+      $.fn.mauGallery.methods.filterByTag();
+    });
+  
+
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
@@ -262,7 +269,36 @@
     }
   };
 
- 
+  // $.fn.mauGallery.listeners = function(options) {
+  //   $(".gallery-item").on("click", function() {
+  //     if (options.lightBox && $(this).prop("tagName") === "IMG") {
+  //       $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
+  //     } else {
+  //       return;
+  //     }
+  //   });
+  
+  //   $(".gallery").on("click", ".nav-link", function() {
+  //     $(".nav-link").removeClass("active-link");
+  //     $(this).addClass("active-link");
+  //     $.fn.mauGallery.methods.filterByTag();
+  //   });
+  
+  //   $(".gallery").on("click", ".mg-prev", () =>
+  //     $.fn.mauGallery.methods.prevImage(options.lightboxId)
+  //   );
+  //   $(".gallery").on("click", ".mg-next", () =>
+  //     $.fn.mauGallery.methods.nextImage(options.lightboxId)
+  //   );
+  // };
+
+//   const myButton = document.querySelectorAll('.nav-link');
+
+// myButton.addEventListener('click', function() {
+//   clr.classList.add("active-link");
+// });
+
+
 
 })(jQuery);
 
