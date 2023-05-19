@@ -57,17 +57,12 @@
       }
     });
 
-
-
-
     $(".gallery").on("click", ".nav-link", function() {
       $(".nav-link").removeClass("active-link");
       $(this).addClass("active-link");
       $.fn.mauGallery.methods.filterByTag();
     });
   
-
-    
 
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
@@ -165,10 +160,11 @@
           index = i ;
         }
       });
-      next =
-        imagesCollection[index] ||
+      // Correction Image Précédente [--index]
+      prev =
+        imagesCollection[--index] ||
         imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -204,7 +200,8 @@
           index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+            // Correction Image suivante [--index]
+      next = imagesCollection[++index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
@@ -274,35 +271,7 @@
     }
   };
 
-  // $.fn.mauGallery.listeners = function(options) {
-  //   $(".gallery-item").on("click", function() {
-  //     if (options.lightBox && $(this).prop("tagName") === "IMG") {
-  //       $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
-  //     } else {
-  //       return;
-  //     }
-  //   });
-  
-  //   $(".gallery").on("click", ".nav-link", function() {
-  //     $(".nav-link").removeClass("active-link");
-  //     $(this).addClass("active-link");
-  //     $.fn.mauGallery.methods.filterByTag();
-  //   });
-  
-  //   $(".gallery").on("click", ".mg-prev", () =>
-  //     $.fn.mauGallery.methods.prevImage(options.lightboxId)
-  //   );
-  //   $(".gallery").on("click", ".mg-next", () =>
-  //     $.fn.mauGallery.methods.nextImage(options.lightboxId)
-  //   );
-  // };
-
-//   const myButton = document.querySelectorAll('.nav-link');
-
-// myButton.addEventListener('click', function() {
-//   clr.classList.add("active-link");
-// });
-
+ 
 
 
 })(jQuery);
