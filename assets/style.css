@@ -251,6 +251,13 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+.modal-dialog {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -360,3 +367,5 @@ input[type="submit"] {
 		width: 80%;
 	}
 }
+
+
